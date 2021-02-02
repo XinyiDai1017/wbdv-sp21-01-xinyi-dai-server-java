@@ -1,3 +1,11 @@
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+a {
+    color: black;
+}
+
 .wbdv-sticky-top {
     position: fixed;
     width: 100%;
@@ -20,14 +28,6 @@
     background-color: rgb(238, 238, 238);
     border-bottom:2px solid lightgray;
     max-width: -webkit-fill-available;
-}
-
-body {
-    background-color: rgb(238, 238, 238);
-}
-
-a {
-    color: black;
 }
 
 .title-icons {
