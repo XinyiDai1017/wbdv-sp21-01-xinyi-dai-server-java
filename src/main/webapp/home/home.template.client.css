@@ -1,0 +1,63 @@
+.wbdv-sticky-top {
+    position: fixed;
+    width: 100%;
+    color: white;
+    background-color: rgb(66, 134, 245);
+    z-index: 1;
+}
+
+.wbdv-padding-12px {
+    padding: 12px;
+}
+
+.first-plus{
+    color: rgb(255,39,0);
+}
+
+.title-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(238, 238, 238);
+    border-bottom:2px solid lightgray;
+    max-width: -webkit-fill-available;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+a {
+    color: black;
+}
+
+.title-icons {
+    color: rgb(66, 134, 245);
+}
+
+.title-icons-grey {
+    color: grey;
+}
+
+.course-row {
+    padding:10px;
+    border-top:1px solid lightgray;
+    border-left:1px solid lightgray;
+    border-right:1px solid lightgray;
+    background: rgb(255, 255, 255);
+}
+
+.first-course-row {
+    padding:10px;
+    border-left:1px solid lightgray;
+    border-right:1px solid lightgray;
+    background: rgb(255, 255, 255);
+}
+
+.last-row {
+    border-bottom:1px solid lightgray;
+}
+
+.bottom-plus{
+    margin: 30px;
+    color: red;
+}
