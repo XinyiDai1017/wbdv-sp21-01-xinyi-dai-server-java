@@ -1,13 +1,13 @@
-.navbar {
-    background-color: rgb(69,75,75);
-}
-
 .top-text-first {
     color: white;
 }
 
 .top-text {
     color: grey;
+}
+
+.navbar {
+    background-color: rgb(69,75,75);
 }
 
 .active {
