@@ -54,10 +54,6 @@ function updateUser() {
             var index = users.findIndex(user => user._id === selectedUser._id)
             users[index] = selectedUser
             renderUsers(users)
-            $usernameFld.val("")
-            $passwordFld.val("")
-            $firstNameFld.val("")
-            $lastNameFld.val("")
         })
 }
 
@@ -67,31 +63,31 @@ function renderUsers(users) {
         var user = users[i]
         $tbody
             .append(`
-        <tr>
-            <td>${user.username}</td>
-            <td>&nbsp</td>
-            <td>${user.firstName}</td>
-            <td>${user.lastName}</td>
-            <td>${user.role}</td>
-            <td>
-                <span class="float-right">
+            <tr>
+                <td>${user.username}</td>
+                <td>&nbsp</td>
+                <td>${user.firstName}</td>
+                <td>${user.lastName}</td>
+                <td>${user.role}</td>
+                <td><span class="float-right">
                     <i class="fa-2x fa fa-times wbdv-remove" id="${i}"></i>
                     <i class="fa-2x fa fa-pencil wbdv-edit" id="${user._id}"></i>
-                </span>
-            </td>
-        </tr>
-    `)
+                </span></td>
+            </tr>
+            `)
     }
     jQuery(".wbdv-remove")
         .click(deleteUser)
     jQuery(".wbdv-edit")
         .click(selectUser)
+    $usernameFld.val("")
+    $passwordFld.val("")
+    $firstNameFld.val("")
+    $lastNameFld.val("")
 }
 
 function findAllUsers() { } // optional - might not need this
 function findUserById() { } // optional - might not need this
-
-
 
 function main() {
     $usernameFld = $("#usernameFld")
