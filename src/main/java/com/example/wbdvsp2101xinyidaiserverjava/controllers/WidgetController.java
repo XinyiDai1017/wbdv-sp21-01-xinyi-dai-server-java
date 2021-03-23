@@ -17,7 +17,7 @@ public class WidgetController {
     public Widget createWidget(
             @PathVariable("tid") String tid,
             @RequestBody Widget widget) {
-        //widget.setTopicId(topicId);
+        widget.setTopicId(tid);
         return service.createWidget(tid, widget);
     }
 
@@ -40,14 +40,14 @@ public class WidgetController {
     }
 
     @DeleteMapping("/api/widgets/{wid}")
-    public int deleteWidget(@PathVariable("wid") String wid) {
-        return service.deleteWidget(wid);
+    public int deleteWidget(@PathVariable("wid") Long id) {
+        return service.deleteWidget(id);
     }
 
     @PutMapping("/api/widgets/{wid}")
     public int updateWidget(
-            @PathVariable("wid") String wid,
+            @PathVariable("wid") Long id,
             @RequestBody Widget widget) {
-        return service.updateWidget(wid, widget);
+        return service.updateWidget(id, widget);
     }
 }

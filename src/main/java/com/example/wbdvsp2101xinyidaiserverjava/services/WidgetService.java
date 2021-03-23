@@ -10,20 +10,20 @@ import java.util.List;
 @Service
 public class WidgetService {
     private List<Widget> widgets = new ArrayList<Widget>();
-//    {
-//        Widget w1 = new Widget(123l, "ABC123", "HEADING", 1, "Welcome to Widgets");
-//        Widget w2 = new Widget(234l, "ABC234", "PARAGRAPH", 1, "This is a paragraph");
-//        Widget w3 = new Widget(345l, "ABC234", "HEADING", 2, "Welcome to WebDev");
-//        Widget w4 = new Widget(456l, "ABC234", "PARAGRAPH", 1, "Lorem ipsum");
-//        widgets.add(w1);
-//        widgets.add(w2);
-//        widgets.add(w3);
-//        widgets.add(w4);
-//    }
+    {
+        Widget w1 = new Widget(123l, "ABC123", "HEADING", 1, "Welcome to Widgets");
+        Widget w2 = new Widget(234l, "ABC234", "PARAGRAPH", 1, "This is a paragraph");
+        Widget w3 = new Widget(345l, "ABC234", "HEADING", 2, "Welcome to WebDev");
+        Widget w4 = new Widget(456l, "ABC234", "PARAGRAPH", 1, "Lorem ipsum");
+        widgets.add(w1);
+        widgets.add(w2);
+        widgets.add(w3);
+        widgets.add(w4);
+    }
     // implement crud operations
     public Widget createWidget(String tid, Widget widget) {
         widget.setTopicId(tid);
-        widget.setId((int) (new Date()).getTime());
+        widget.setId((new Date()).getTime());
         widgets.add(widget);
         return widget;
     }
@@ -47,20 +47,20 @@ public class WidgetService {
         }
         return null;
     }
-    public int updateWidget(String wid, Widget newWidget) {
+    public int updateWidget(Long id, Widget newWidget) {
         for(int i=0; i<widgets.size(); i++) {
             Widget w = widgets.get(i);
-            if(w.getId().equals(wid)) {
+            if(w.getId().equals(id)) {
                 widgets.set(i, newWidget);
                 return 1;
             }
         }
         return -1;
     }
-    public int deleteWidget(String wid) {
+    public int deleteWidget(Long id) {
         int index = -1;
         for(int i=0; i<widgets.size(); i++) {
-            if(widgets.get(i).getId().equals(wid)) {
+            if(widgets.get(i).getId().equals(id)) {
                 index = i;
                 widgets.remove(index);
                 return 1;

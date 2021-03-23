@@ -3,7 +3,7 @@ package com.example.wbdvsp2101xinyidaiserverjava.models;
 public class Widget {
     private String topicId;
     private String name;
-    private Integer id;
+    private Long id;
     private String type;
     private Integer widgetOrder;
     private String text;
@@ -106,11 +106,11 @@ public class Widget {
     }
 
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -141,7 +141,7 @@ public class Widget {
     public Widget() {
     }
 
-    public Widget(Integer id, String topicId, String type, Integer size, String text) {
+    public Widget(Long id, String topicId, String type, Integer size, String text) {
         this.id = id;
         this.topicId = topicId;
         this.type = type;
@@ -149,7 +149,7 @@ public class Widget {
         this.text = text;
     }
 
-    public Widget(Integer id, String name, String topicId, String type, Integer widgetOrder, Integer size, String text, String src, String url, String href, Integer width, Integer height,
+    public Widget(Long id, String name, String topicId, String type, Integer widgetOrder, Integer size, String text, String src, String url, String href, Integer width, Integer height,
 String cssClass, String style, String value) {
         this.id = id;
         this.name = name;
