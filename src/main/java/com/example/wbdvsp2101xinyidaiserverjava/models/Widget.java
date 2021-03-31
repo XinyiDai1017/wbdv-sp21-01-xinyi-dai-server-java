@@ -1,9 +1,15 @@
 package com.example.wbdvsp2101xinyidaiserverjava.models;
 
+import javax.persistence.*;
+
+@Entity //map Widget class to db
+@Table(name="widgets")
 public class Widget {
+    @Id //set id as primary key
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String topicId;
     private String name;
-    private Long id;
     private String type;
     private Integer widgetOrder;
     private String text;

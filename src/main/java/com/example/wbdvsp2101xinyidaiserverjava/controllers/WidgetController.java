@@ -17,7 +17,7 @@ public class WidgetController {
     public Widget createWidget(
             @PathVariable("tid") String tid,
             @RequestBody Widget widget) {
-        widget.setTopicId(tid);
+         widget.setTopicId(tid);
         return service.createWidget(tid, widget);
     }
 
